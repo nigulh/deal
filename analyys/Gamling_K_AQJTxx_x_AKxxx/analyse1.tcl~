@@ -1,0 +1,58 @@
+source lib/utility.tcl
+source lib/ddscore.tcl
+
+south is "K AQJT94 5 AK954"
+set dealCnt 0
+set clubGame 0
+set clubSlam 0
+set heartCnt(8) 0
+set heartCnt(9) 0
+set heartCnt(10) 0
+set heartCnt(11) 0
+set heartCnt(12) 0
+set heartCnt(13) 0
+
+proc my_write_deal {  } {
+	set line [list]
+	set scores [list]
+	foreach hand {north east west} {
+		lappend line [join [$hand] "."]
+	}
+	lappend scores [deal::tricks east notrump]
+	lappend scores [deal::tricks east diamonds]
+	set heartTricks [deal::tricks south hearts]
+	set clubTricks [deal::tricks south clubs]
+	lappend scores $clubTricks
+	lappend scores $heartTricks
+	global clubGame
+	global clubSlam
+	global heartCnt
+	incr heartCnt($heartTricks)
+	if {($clubTricks >= 11) && ($heartTricks <= 9)} {incr clubGame}
+	if {($clubTricks >= 12) && ($heartTricks <= 11)} {incr clubSlam}
+	#lappend scores [ddscore {3 notrump doubled} east nonvul]
+	#lappend scores [ddscore {5 diamonds doubled} east nonvul]
+	#lappend scores [ddscore {4 hearts} north nonvul]
+	#append scores [ddscore {5 hearts} north nonvul]
+
+	puts "[join $line |]|[join $scores |]"
+}
+
+main {
+	global dealCnt
+	incr dealCnt
+	if {[diamonds east] < 7} {reject}
+	if {[Top3 east diamonds] < 3} {reject}
+	if {[Top2 east hearts] + [Top2 east spades] > 0} {reject}
+	my_write_deal 
+	accept
+}
+
+deal_finished {
+	global dealCnt
+	global heartSlam
+	global clubGame, clubSlam
+	puts "Total $heartSlam heartslams"
+	puts "Total club contracts without hearts: $clubGame, $clubSlam"
+	puts "Generated $dealCnt deals"
+}
