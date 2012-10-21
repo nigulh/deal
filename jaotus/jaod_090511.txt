@@ -1,0 +1,800 @@
+Deal: 1
+[Date "2009.05.11"]
+[Board "1"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:A87642.85.J93.T8 KT.QJ43.K765.AQ4 J53.AK6.82.J9763 Q9.T972.AQT4.K52"]
+[Score "NS -300"]
+{
+          S: A87642
+          H: 85
+          D: J93
+          C: T8
+ S: Q9             S: KT
+ H: T972           H: QJ43
+ D: AQT4           D: K765
+ C: K52            C: AQ4
+          S: J53
+          H: AK6
+          D: 82
+          C: J9763
+north makes 6 3 3 8 5  in C D H S NT
+east makes 7 9 10 5 8  in C D H S NT
+south makes 6 3 3 8 5  in C D H S NT
+west makes 7 9 10 5 8  in C D H S NT
+}
+Deal: 2
+[Date "2009.05.11"]
+[Board "2"]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "N:AQ872.A743.AT8.7 43.J.Q7542.AJT84 KJT.QT852.J3.K53 965.K96.K96.Q962"]
+[Score "NS 650"]
+{
+          S: AQ872
+          H: A743
+          D: AT8
+          C: 7
+ S: 965            S: 43
+ H: K96            H: J
+ D: K96            D: Q7542
+ C: Q962           C: AJT84
+          S: KJT
+          H: QT852
+          D: J3
+          C: K53
+north makes 6 6 11 10 9  in C D H S NT
+east makes 7 6 2 2 3  in C D H S NT
+south makes 6 6 11 10 9  in C D H S NT
+west makes 7 6 2 2 3  in C D H S NT
+}
+Deal: 3
+[Date "2009.05.11"]
+[Board "3"]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "N:AQT74..T876.A754 J3.AKJ76.Q94.Q98 92.T843.AJ532.J6 K865.Q952.K.KT32"]
+[Score "NS 400"]
+{
+          S: AQT74
+          H: ---
+          D: T876
+          C: A754
+ S: K865           S: J3
+ H: Q952           H: AKJ76
+ D: K              D: Q94
+ C: KT32           C: Q98
+          S: 92
+          H: T843
+          D: AJ532
+          C: J6
+north makes 5 11 4 8 4  in C D H S NT
+east makes 6 2 8 5 7  in C D H S NT
+south makes 5 11 4 7 4  in C D H S NT
+west makes 6 2 8 5 7  in C D H S NT
+}
+Deal: 4
+[Date "2009.05.11"]
+[Board "4"]
+[Dealer "W"]
+[Vulnerable "All"]
+[Deal "N:AQJ85.QT962.J43. 962.A753.A52.AK4 T743.4.96.T98532 K.KJ8.KQT87.QJ76"]
+[Score "NS -600"]
+{
+          S: AQJ85
+          H: QT962
+          D: J43
+          C: ---
+ S: K              S: 962
+ H: KJ8            H: A753
+ D: KQT87          D: A52
+ C: QJ76           C: AK4
+          S: T743
+          H: 4
+          D: 96
+          C: T98532
+north makes 4 1 4 8 1  in C D H S NT
+east makes 8 10 9 4 8  in C D H S NT
+south makes 4 1 4 8 1  in C D H S NT
+west makes 9 11 9 5 8  in C D H S NT
+}
+Deal: 5
+[Date "2009.05.11"]
+[Board "5"]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:Q942.A9872.T2.42 AKJ.Q3.QJ8543.A5 T87653.T654.A.98 .KJ.K976.KQJT763"]
+[Score "NS -430"]
+{
+          S: Q942
+          H: A9872
+          D: T2
+          C: 42
+ S: ---            S: AKJ
+ H: KJ             H: Q3
+ D: K976           D: QJ8543
+ C: KQJT763        C: A5
+          S: T87653
+          H: T654
+          D: A
+          C: 98
+north makes 1 1 6 7 2  in C D H S NT
+east makes 10 11 6 6 10  in C D H S NT
+south makes 1 1 6 7 2  in C D H S NT
+west makes 10 11 6 6 10  in C D H S NT
+}
+Deal: 6
+[Date "2009.05.11"]
+[Board "6"]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "N:AQ9852.A54.75.75 KJT74.3.QJ43.AKJ .T9876.AT962.QT6 63.KQJ2.K8.98432"]
+[Score "NS -110"]
+{
+          S: AQ9852
+          H: A54
+          D: 75
+          C: 75
+ S: 63             S: KJT74
+ H: KQJ2           H: 3
+ D: K8             D: QJ43
+ C: 98432          C: AKJ
+          S: ---
+          H: T9876
+          D: AT962
+          C: QT6
+north makes 4 6 6 5 5  in C D H S NT
+east makes 9 7 6 7 7  in C D H S NT
+south makes 4 6 6 5 5  in C D H S NT
+west makes 8 7 6 7 7  in C D H S NT
+}
+Deal: 7
+[Date "2009.05.11"]
+[Board "7"]
+[Dealer "S"]
+[Vulnerable "All"]
+[Deal "N:A872.AJ9652.862. 5.K3.T95.KQJT754 T63.T7.QJ73.A932 KQJ94.Q84.AK4.86"]
+[Score "NS -110"]
+{
+          S: A872
+          H: AJ9652
+          D: 862
+          C: ---
+ S: KQJ94          S: 5
+ H: Q84            H: K3
+ D: AK4            D: T95
+ C: 86             C: KQJT754
+          S: T63
+          H: T7
+          D: QJ73
+          C: A932
+north makes 3 6 7 5 4  in C D H S NT
+east makes 9 7 6 7 7  in C D H S NT
+south makes 3 6 7 5 4  in C D H S NT
+west makes 9 7 6 7 7  in C D H S NT
+}
+Deal: 8
+[Date "2009.05.11"]
+[Board "8"]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "N:KJ.J9.AJT95.9842 AT753.AK3.K86.AQ 842.8764.Q32.765 Q96.QT52.74.KJT3"]
+[Score "NS -450"]
+{
+          S: KJ
+          H: J9
+          D: AJT95
+          C: 9842
+ S: Q96            S: AT753
+ H: QT52           H: AK3
+ D: 74             D: K86
+ C: KJT3           C: AQ
+          S: 842
+          H: 8764
+          D: Q32
+          C: 765
+north makes 2 5 2 2 2  in C D H S NT
+east makes 10 8 11 11 10  in C D H S NT
+south makes 2 5 2 2 2  in C D H S NT
+west makes 10 8 11 11 10  in C D H S NT
+}
+Deal: 9
+[Date "2009.05.11"]
+[Board "9"]
+[Dealer "N"]
+[Vulnerable "EW"]
+[Deal "N:KJ83.Q.KJ86.K654 764.KT976.A97.J7 2.AJ84.QT4.AQ982 AQT95.532.532.T3"]
+[Score "NS 430"]
+{
+          S: KJ83
+          H: Q
+          D: KJ86
+          C: K654
+ S: AQT95          S: 764
+ H: 532            H: KT976
+ D: 532            D: A97
+ C: T3             C: J7
+          S: 2
+          H: AJ84
+          D: QT4
+          C: AQ982
+north makes 11 11 9 9 10  in C D H S NT
+east makes 2 2 4 4 2  in C D H S NT
+south makes 11 11 9 9 10  in C D H S NT
+west makes 2 2 4 4 2  in C D H S NT
+}
+Deal: 10
+[Date "2009.05.11"]
+[Board "10"]
+[Dealer "E"]
+[Vulnerable "All"]
+[Deal "N:J98.JT854.43.Q86 T.AQ976.K652.T94 AKQ752.K3.QT.AK5 643.2.AJ987.J732"]
+[Score "NS 140"]
+{
+          S: J98
+          H: JT854
+          D: 43
+          C: Q86
+ S: 643            S: T
+ H: 2              H: AQ976
+ D: AJ987          D: K652
+ C: J732           C: T94
+          S: AKQ752
+          H: K3
+          D: QT
+          C: AK5
+north makes 6 4 7 9 7  in C D H S NT
+east makes 7 9 6 3 4  in C D H S NT
+south makes 6 4 7 9 7  in C D H S NT
+west makes 7 9 6 3 4  in C D H S NT
+}
+Deal: 11
+[Date "2009.05.11"]
+[Board "11"]
+[Dealer "S"]
+[Vulnerable "None"]
+[Deal "N:K.AJT3.QT97.KQ97 AQT4.Q82.AJ.JT43 865.6.K865432.82 J9732.K9754..A65"]
+[Score "NS -100"]
+{
+          S: K
+          H: AJT3
+          D: QT97
+          C: KQ97
+ S: J9732          S: AQT4
+ H: K9754          H: Q82
+ D: ---            D: AJ
+ C: A65            C: JT43
+          S: 865
+          H: 6
+          D: K865432
+          C: 82
+north makes 5 10 3 3 4  in C D H S NT
+east makes 8 3 9 10 7  in C D H S NT
+south makes 4 10 3 3 4  in C D H S NT
+west makes 8 3 9 10 7  in C D H S NT
+}
+Deal: 12
+[Date "2009.05.11"]
+[Board "12"]
+[Dealer "W"]
+[Vulnerable "NS"]
+[Deal "N:Q53.8765.T.98542 KJ62.9.K9654.AQ6 A9874.QT2.87.K73 T.AKJ43.AQJ32.JT"]
+[Score "NS -920"]
+{
+          S: Q53
+          H: 8765
+          D: T
+          C: 98542
+ S: T              S: KJ62
+ H: AKJ43          H: 9
+ D: AQJ32          D: K9654
+ C: JT             C: AQ6
+          S: A9874
+          H: QT2
+          D: 87
+          C: K73
+north makes 5 1 2 4 2  in C D H S NT
+east makes 8 12 11 7 11  in C D H S NT
+south makes 5 1 2 4 2  in C D H S NT
+west makes 8 12 10 7 11  in C D H S NT
+}
+Deal: 13
+[Date "2009.05.11"]
+[Board "13"]
+[Dealer "N"]
+[Vulnerable "All"]
+[Deal "N:Q74.AQJ832.A4.87 AJ53.6.QJ65.J643 K2.K94.T93.AQT95 T986.T75.K872.K2"]
+[Score "NS 500"]
+{
+          S: Q74
+          H: AQJ832
+          D: A4
+          C: 87
+ S: T986           S: AJ53
+ H: T75            H: 6
+ D: K872           D: QJ65
+ C: K2             C: J643
+          S: K2
+          H: K94
+          D: T93
+          C: AQT95
+north makes 9 5 10 5 9  in C D H S NT
+east makes 2 8 2 8 2  in C D H S NT
+south makes 9 5 10 5 9  in C D H S NT
+west makes 2 8 2 8 2  in C D H S NT
+}
+Deal: 14
+[Date "2009.05.11"]
+[Board "14"]
+[Dealer "E"]
+[Vulnerable "None"]
+[Deal "N:J52.JT.T7.KQT432 A.Q8.KQ9432.AJ97 QT974.K63.A8.865 K863.A97542.J65."]
+[Score "NS -920"]
+{
+          S: J52
+          H: JT
+          D: T7
+          C: KQT432
+ S: K863           S: A
+ H: A97542         H: Q8
+ D: J65            D: KQ9432
+ C: ---            C: AJ97
+          S: QT974
+          H: K63
+          D: A8
+          C: 865
+north makes 6 1 2 6 3  in C D H S NT
+east makes 7 12 11 7 10  in C D H S NT
+south makes 6 1 2 6 3  in C D H S NT
+west makes 7 12 11 7 10  in C D H S NT
+}
+Deal: 15
+[Date "2009.05.11"]
+[Board "15"]
+[Dealer "S"]
+[Vulnerable "NS"]
+[Deal "N:.QT9642.K3.KQJ94 T8732.J8.97642.8 AK654.3.8.AT7532 QJ9.AK75.AQJT5.6"]
+[Score "NS 300"]
+{
+          S: ---
+          H: QT9642
+          D: K3
+          C: KQJ94
+ S: QJ9            S: T8732
+ H: AK75           H: J8
+ D: AQJT5          D: 97642
+ C: 6              C: 8
+          S: AK654
+          H: 3
+          D: 8
+          C: AT7532
+north makes 11 4 9 6 9  in C D H S NT
+east makes 1 8 3 5 4  in C D H S NT
+south makes 11 4 9 6 9  in C D H S NT
+west makes 1 9 3 6 4  in C D H S NT
+}
+Deal: 16
+[Date "2009.05.11"]
+[Board "16"]
+[Dealer "W"]
+[Vulnerable "EW"]
+[Deal "N:QT83.3.QT853.KJ2 A7.JT8652.94.985 KJ.A974.AJ62.A73 96542.KQ.K7.QT64"]
+[Score "NS 430"]
+{
+          S: QT83
+          H: 3
+          D: QT853
+          C: KJ2
+ S: 96542          S: A7
+ H: KQ             H: JT8652
+ D: K7             D: 94
+ C: QT64           C: 985
+          S: KJ
+          H: A974
+          D: AJ62
+          C: A73
+north makes 9 11 7 9 10  in C D H S NT
+east makes 4 2 6 4 3  in C D H S NT
+south makes 9 11 7 9 10  in C D H S NT
+west makes 4 2 6 4 3  in C D H S NT
+}
+Deal: 17
+[Date "2009.05.11"]
+[Board "17"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:AQJ87.Q62.T.Q832 K.AT.KQJ9765.K97 T6532.KJ95.A4.A5 94.8743.832.JT64"]
+[Score "NS 450"]
+{
+          S: AQJ87
+          H: Q62
+          D: T
+          C: Q832
+ S: 94             S: K
+ H: 8743           H: AT
+ D: 832            D: KQJ9765
+ C: JT64           C: K97
+          S: T6532
+          H: KJ95
+          D: A4
+          C: A5
+north makes 8 5 11 11 8  in C D H S NT
+east makes 5 8 2 2 3  in C D H S NT
+south makes 8 5 11 11 8  in C D H S NT
+west makes 5 8 2 2 3  in C D H S NT
+}
+Deal: 18
+[Date "2009.05.11"]
+[Board "18"]
+[Dealer "E"]
+[Vulnerable "NS"]
+[Deal "N:AJ9.A763.J73.KQ6 72.J42.9542.T932 864.KT5.QT86.854 KQT53.Q98.AK.AJ7"]
+[Score "NS -90"]
+{
+          S: AJ9
+          H: A763
+          D: J73
+          C: KQ6
+ S: KQT53          S: 72
+ H: Q98            H: J42
+ D: AK             D: 9542
+ C: AJ7            C: T932
+          S: 864
+          H: KT5
+          D: QT86
+          C: 854
+north makes 5 7 7 6 7  in C D H S NT
+east makes 7 6 6 7 6  in C D H S NT
+south makes 5 7 7 6 7  in C D H S NT
+west makes 8 6 6 7 6  in C D H S NT
+}
+Deal: 19
+[Date "2009.05.11"]
+[Board "19"]
+[Dealer "S"]
+[Vulnerable "EW"]
+[Deal "N:A7.42.Q843.AQJ84 JT5.T98765.97.62 KQ642.J.KJ62.T93 983.AKQ3.AT5.K75"]
+[Score "NS 450"]
+{
+          S: A7
+          H: 42
+          D: Q843
+          C: AQJ84
+ S: 983            S: JT5
+ H: AKQ3           H: T98765
+ D: AT5            D: 97
+ C: K75            C: 62
+          S: KQ642
+          H: J
+          D: KJ62
+          C: T93
+north makes 11 11 6 11 6  in C D H S NT
+east makes 1 2 7 1 3  in C D H S NT
+south makes 11 11 6 11 6  in C D H S NT
+west makes 2 2 7 1 3  in C D H S NT
+}
+Deal: 20
+[Date "2009.05.11"]
+[Board "20"]
+[Dealer "W"]
+[Vulnerable "All"]
+[Deal "N:QJ82.KJ94.4.KQ43 753.A762.QT5.AT5 .QT853.K9762.J76 AKT964..AJ83.982"]
+[Score "NS -500"]
+{
+          S: QJ82
+          H: KJ94
+          D: 4
+          C: KQ43
+ S: AKT964         S: 753
+ H: ---            H: A762
+ D: AJ83           D: QT5
+ C: 982            C: AT5
+          S: ---
+          H: QT853
+          D: K9762
+          C: J76
+north makes 6 5 8 3 5  in C D H S NT
+east makes 6 8 4 10 8  in C D H S NT
+south makes 7 5 9 3 5  in C D H S NT
+west makes 6 8 4 10 8  in C D H S NT
+}
+Deal: 21
+[Date "2009.05.11"]
+[Board "21"]
+[Dealer "N"]
+[Vulnerable "NS"]
+[Deal "N:83.KQ96532.K.542 KQ7.T74.A32.AKT3 T6542.A8.J96.Q96 AJ9.J.QT8754.J87"]
+[Score "NS -400"]
+{
+          S: 83
+          H: KQ96532
+          D: K
+          C: 542
+ S: AJ9            S: KQ7
+ H: J              H: T74
+ D: QT8754         D: A32
+ C: J87            C: AKT3
+          S: T6542
+          H: A8
+          D: J96
+          C: Q96
+north makes 2 2 8 3 2  in C D H S NT
+east makes 10 11 5 9 6  in C D H S NT
+south makes 2 2 8 3 2  in C D H S NT
+west makes 10 11 5 9 6  in C D H S NT
+}
+Deal: 22
+[Date "2009.05.11"]
+[Board "22"]
+[Dealer "E"]
+[Vulnerable "EW"]
+[Deal "N:T8.J75.J8.AKJT73 AKJ975.K63.A4.62 Q62.Q942.63.9854 43.AT8.KQT9752.Q"]
+[Score "NS -1370"]
+{
+          S: T8
+          H: J75
+          D: J8
+          C: AKJT73
+ S: 43             S: AKJ975
+ H: AT8            H: K63
+ D: KQT9752        D: A4
+ C: Q              C: 62
+          S: Q62
+          H: Q942
+          D: 63
+          C: 9854
+north makes 7 0 5 2 2  in C D H S NT
+east makes 6 12 8 11 7  in C D H S NT
+south makes 7 0 5 2 2  in C D H S NT
+west makes 6 12 7 11 7  in C D H S NT
+}
+Deal: 23
+[Date "2009.05.11"]
+[Board "23"]
+[Dealer "S"]
+[Vulnerable "All"]
+[Deal "N:986.K982.982.742 KQ.A765.QJ43.KJ8 432.QJT3.KT.AQ96 AJT75.4.A765.T53"]
+[Score "NS -600"]
+{
+          S: 986
+          H: K982
+          D: 982
+          C: 742
+ S: AJT75          S: KQ
+ H: 4              H: A765
+ D: A765           D: QJ43
+ C: T53            C: KJ8
+          S: 432
+          H: QJT3
+          D: KT
+          C: AQ96
+north makes 3 2 6 3 4  in C D H S NT
+east makes 9 11 7 9 8  in C D H S NT
+south makes 3 2 6 3 4  in C D H S NT
+west makes 8 10 7 9 8  in C D H S NT
+}
+Deal: 24
+[Date "2009.05.11"]
+[Board "24"]
+[Dealer "W"]
+[Vulnerable "None"]
+[Deal "N:K8743.2.842.9852 QT2.KJT.AQT73.74 AJ5.Q9743.J6.AJ6 96.A865.K95.KQT3"]
+[Score "NS -400"]
+{
+          S: K8743
+          H: 2
+          D: 842
+          C: 9852
+ S: 96             S: QT2
+ H: A865           H: KJT
+ D: K95            D: AQT73
+ C: KQT3           C: 74
+          S: AJ5
+          H: Q9743
+          D: J6
+          C: AJ6
+north makes 4 3 5 7 4  in C D H S NT
+east makes 7 9 8 6 9  in C D H S NT
+south makes 4 3 5 7 4  in C D H S NT
+west makes 7 9 8 5 7  in C D H S NT
+}
+Deal: 25
+[Date "2009.05.11"]
+[Board "25"]
+[Dealer "N"]
+[Vulnerable "EW"]
+[Deal "N:AKQ7.QJ42.95.A87 654.A73.KQ873.J3 J98.KT95.AT42.95 T32.86.J6.KQT642"]
+[Score "NS 420"]
+{
+          S: AKQ7
+          H: QJ42
+          D: 95
+          C: A87
+ S: T32            S: 654
+ H: 86             H: A73
+ D: J6             D: KQ873
+ C: KQT642         C: J3
+          S: J98
+          H: KT95
+          D: AT42
+          C: 95
+north makes 6 7 10 9 9  in C D H S NT
+east makes 7 5 3 3 4  in C D H S NT
+south makes 6 7 10 9 9  in C D H S NT
+west makes 7 5 3 3 4  in C D H S NT
+}
+Deal: 26
+[Date "2009.05.11"]
+[Board "26"]
+[Dealer "E"]
+[Vulnerable "All"]
+[Deal "N:AKT3.763.86.J974 87.95.Q97432.AQ2 Q9654.AKJ.A.KT53 J2.QT842.KJT5.86"]
+[Score "NS 1370"]
+{
+          S: AKT3
+          H: 763
+          D: 86
+          C: J974
+ S: J2             S: 87
+ H: QT842          H: 95
+ D: KJT5           D: Q97432
+ C: 86             C: AQ2
+          S: Q9654
+          H: AKJ
+          D: A
+          C: KT53
+north makes 12 6 7 11 8  in C D H S NT
+east makes 1 7 5 2 2  in C D H S NT
+south makes 12 6 8 11 8  in C D H S NT
+west makes 1 7 5 2 2  in C D H S NT
+}
+Deal: 27
+[Date "2009.05.11"]
+[Board "27"]
+[Dealer "S"]
+[Vulnerable "None"]
+[Deal "N:82.AT52.KT9.K954 96.K8764.QJ5.A32 AK73.9.A8632.T76 QJT54.QJ3.74.QJ8"]
+[Score "NS 130"]
+{
+          S: 82
+          H: AT52
+          D: KT9
+          C: K954
+ S: QJT54          S: 96
+ H: QJ3            H: K8764
+ D: 74             D: QJ5
+ C: QJ8            C: A32
+          S: AK73
+          H: 9
+          D: A8632
+          C: T76
+north makes 9 10 6 8 7  in C D H S NT
+east makes 4 3 7 5 6  in C D H S NT
+south makes 9 10 6 8 7  in C D H S NT
+west makes 4 3 7 5 6  in C D H S NT
+}
+Deal: 28
+[Date "2009.05.11"]
+[Board "28"]
+[Dealer "W"]
+[Vulnerable "NS"]
+[Deal "N:T76.64.KQ87.8543 954.QJ5.63.AQJ76 AJ832.AK32.95.T9 KQ.T987.AJT42.K2"]
+[Score "NS 100"]
+{
+          S: T76
+          H: 64
+          D: KQ87
+          C: 8543
+ S: KQ             S: 954
+ H: T987           H: QJ5
+ D: AJT42          D: 63
+ C: K2             C: AQJ76
+          S: AJ832
+          H: AK32
+          D: 95
+          C: T9
+north makes 4 6 5 8 6  in C D H S NT
+east makes 8 7 8 4 7  in C D H S NT
+south makes 4 6 5 8 6  in C D H S NT
+west makes 8 7 8 4 7  in C D H S NT
+}
+Deal: 29
+[Date "2009.05.11"]
+[Board "29"]
+[Dealer "N"]
+[Vulnerable "All"]
+[Deal "N:A952.JT52.865.A8 QT83.AK74.K9.632 KJ74.8.Q32.KQT75 6.Q963.AJT74.J94"]
+[Score "NS -140"]
+{
+          S: A952
+          H: JT52
+          D: 865
+          C: A8
+ S: 6              S: QT83
+ H: Q963           H: AK74
+ D: AJT74          D: K9
+ C: J94            C: 632
+          S: KJ74
+          H: 8
+          D: Q32
+          C: KQT75
+north makes 8 4 4 7 4  in C D H S NT
+east makes 5 9 9 4 5  in C D H S NT
+south makes 8 4 4 7 4  in C D H S NT
+west makes 5 9 9 4 5  in C D H S NT
+}
+Deal: 30
+[Date "2009.05.11"]
+[Board "30"]
+[Dealer "E"]
+[Vulnerable "None"]
+[Deal "N:AK.QJ.JT4.KQJ542 T95432..K753.A96 QJ87.T873.A92.T7 6.AK96542.Q86.83"]
+[Score "NS 400"]
+{
+          S: AK
+          H: QJ
+          D: JT4
+          C: KQJ542
+ S: 6              S: T95432
+ H: AK96542        H: ---
+ D: Q86            D: K753
+ C: 83             C: A96
+          S: QJ87
+          H: T873
+          D: A92
+          C: T7
+north makes 8 6 6 7 9  in C D H S NT
+east makes 4 6 7 6 4  in C D H S NT
+south makes 8 6 6 6 9  in C D H S NT
+west makes 4 6 7 6 4  in C D H S NT
+}
+Deal: 31
+[Date "2009.05.11"]
+[Board "31"]
+[Dealer "S"]
+[Vulnerable "NS"]
+[Deal "N:KJ3.J82.963.T932 A7.753.KQJ8.Q765 Q86542.AQ.T54.A4 T9.KT964.A72.KJ8"]
+[Score "NS -140"]
+{
+          S: KJ3
+          H: J82
+          D: 963
+          C: T932
+ S: T9             S: A7
+ H: KT964          H: 753
+ D: A72            D: KQJ8
+ C: KJ8            C: Q765
+          S: Q86542
+          H: AQ
+          D: T54
+          C: A4
+north makes 4 4 3 7 5  in C D H S NT
+east makes 9 9 9 6 6  in C D H S NT
+south makes 4 4 3 7 5  in C D H S NT
+west makes 9 9 9 6 6  in C D H S NT
+}
+Deal: 32
+[Date "2009.05.11"]
+[Board "32"]
+[Dealer "W"]
+[Vulnerable "EW"]
+[Deal "N:A854.T3.T86.A964 QJT63.KJ.AQ73.T7 7.A7642.K9.KQ852 K92.Q985.J542.J3"]
+[Score "NS 400"]
+{
+          S: A854
+          H: T3
+          D: T86
+          C: A964
+ S: K92            S: QJT63
+ H: Q985           H: KJ
+ D: J542           D: AQ73
+ C: J3             C: T7
+          S: 7
+          H: A7642
+          D: K9
+          C: KQ852
+north makes 11 5 9 5 8  in C D H S NT
+east makes 2 7 4 8 5  in C D H S NT
+south makes 11 5 9 5 8  in C D H S NT
+west makes 2 7 4 8 5  in C D H S NT
+}
