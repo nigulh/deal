@@ -1,0 +1,73 @@
+set okrow(east) 1
+set okcol(east) 30
+set okrow(west) 1
+set okcol(west) 10
+set okrow(south) 1
+set okcol(south) 40
+set okrow(north) 1
+set okcol(north) 20
+set vulmod(north) 3
+set vulmod(south) 3
+set vulmod(east) 2
+set vulmod(west) 2
+
+proc handvul {hand} {
+	global dealCnt
+	global vulmod
+	set handmod [expr $dealCnt % 4]
+	if {$handmod == 1} {
+		return "-"
+	}
+	if {$handmod == 0} {
+		return "+"
+	}
+	if {$handmod == $vulmod($hand)} {
+		return "+"
+	}
+	return "-"
+}
+
+proc okputhand {hand} {
+	global dealCnt
+        okbox.$hand clear
+	okbox.$hand write 0 0 "[handvul $hand] ([hcp $hand])" 
+	set rowhand 1
+	foreach suit {spades hearts diamonds clubs} letter {S H D C} {
+		okbox.$hand write $rowhand 0 "[$hand -void --- $suit]"
+		incr rowhand
+	}
+}
+
+proc okinit {} {
+    global okrow
+    global okcol
+    global dealCnt
+    stringbox okbox 6 80
+    
+    okbox subbox okbox.letter 2 4 4 1
+    okbox.letter write 0 0 "S"
+    okbox.letter write 1 0 "H"
+    okbox.letter write 2 0 "D"
+    okbox.letter write 3 0 "C"
+    okbox write 1 0 "$dealCnt."
+
+    foreach hand {west north east south} {
+    	okbox subbox okbox.$hand $okrow($hand) $okcol($hand) 5 10
+    }
+}
+
+
+proc write_deal {} {
+	global dealCnt
+	incr dealCnt
+	okinit
+	foreach hand {west south north east} {
+		okputhand $hand
+	}
+	puts "[okbox compact]"
+	for {set i 0} {$i < 8} {incr i} {
+ 		puts ""
+	}
+}
+
+

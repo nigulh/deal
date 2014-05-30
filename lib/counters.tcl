@@ -166,11 +166,18 @@ proc output1d {elem} {
 }
 
 proc output2d {elem} {
-	puts -nonewline [formatCell [dict get $elem desc] 30 ]
+	global firstCellWidth
+	set isFirst true
+	foreach desc [split [dict get $elem desc] "\n"] {
+		if {!$isFirst} {puts ""}
+		puts -nonewline [formatCell $desc $firstCellWidth]
+		set isFirst false
+	}
 	foreach row [dict get $elem rows] {
 		foreach col [dict get $elem cols] {
 			set data [getOutputData $elem $row $col]
-			if { $col == "." } { if { $row == "."} { set width 30 } else { set width 32 } } else { set width -1 }
+			if { $col == "." && $row == "." } { continue }
+			if { $col == "." } { set width $firstCellWidth } else { set width -1 }
 			puts -nonewline [formatCell $data $width]
 		}
 		puts ""
@@ -193,11 +200,12 @@ proc outputdb { } {
 
 set cellWidth 6
 set numberPrecision 3
+set firstCellWidth 30
 
 proc formatNumber {data {precision -1}} {
 	global numberPrecision
 	if { $precision == -1 } { set precision $numberPrecision }
-	if { $data == 0 } { return "." } else {
+	if { $data == 0 } { return "0" } else {
 		return [ string trimleft [ format "%-.*g" $precision $data ] 0 ]
 	}
 }
