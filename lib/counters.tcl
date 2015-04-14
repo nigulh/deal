@@ -23,6 +23,7 @@ proc isStatHeader { header } {
 proc init0d { dbVar var } {
 	upvar 1 $dbVar db
 	dict set db $var data 0
+	dict set db $var totalCnt 1
 }
 
 proc init1d { dbVar var rows } {
@@ -35,7 +36,7 @@ proc init1d { dbVar var rows } {
 			dict set db $var data $row, 0
 		}
 	}
-	
+	dict set db $var totalCnt 0
 }
 
 proc init2d { dbVar var rows cols } {
@@ -53,6 +54,7 @@ proc init2d { dbVar var rows cols } {
 			dict set db $var data $row,$col 0
 		}
 	} }
+        dict set db $var totalCnt 0
 }
 
 proc init { var desc args } {
@@ -79,6 +81,7 @@ proc incr1d { dbVar var row } {
 	
 	dict set db $var data $row, [ expr [dict get $db $var data $row,] + 1]
 	catch {$var,avg, add $row}
+        dict set db $var totalCnt [ expr [dict get $db $var totalCnt] + 1]
 }
 
 proc incr2d { dbVar var row col } {
@@ -88,6 +91,7 @@ proc incr2d { dbVar var row col } {
 	catch {$var,avg,$col add $row}
 	catch {$var,sum,avg add $col}
 	catch {$var,avg,sum add $row}
+        dict set db $var totalCnt [ expr [dict get $db $var totalCnt] + 1]
 }
 
 proc increment { var args } {
@@ -112,12 +116,20 @@ proc getStat { stat type minCount } {
 	return [ $stat $type ]
 }
 
+proc normalizeCount { count totalCnt } {
+	if {[string is integer -strict $count]} {
+		return [expr 100.0 * $count / $totalCnt]
+	}
+	return $count
+}
+
 proc getOutputData { elem row col } {
 	if { $row == "." && $col == "."} { return "" }
 	if { $row == "."} { return $col }
 	if { $col == "."} { return $row }
+        set totalCnt [dict get $elem totalCnt]
 	if { ![isStatHeader $row] && ![isStatHeader $col] } { 
-		set ret [normalizeCount [ dict get $elem data $row,$col ]]
+		set ret [normalizeCount [ dict get $elem data $row,$col ] $totalCnt]
 	} else {
 		set var [dict get $elem var]
 		if { $row == "sum" && $col == "avg" } { set ret [ getStat $var,sum,avg average 1 ] 
@@ -126,10 +138,10 @@ proc getOutputData { elem row col } {
 		} elseif { $row == "sdev" && $col == "sum" } { set ret [ getStat $var,avg,sum sdev 2 ] 
 		} elseif { [isStatHeader $row] && [isStatHeader $col] } { return "" 
 		# Now there is only one statistical row/col
-		} elseif { $row == "sum" } { set ret [ normalizeCount [ $var,avg,$col count ]]
+		} elseif { $row == "sum" } { set ret [ normalizeCount [ $var,avg,$col count ] $totalCnt]
 		} elseif { $row == "avg" } { set ret [ getStat $var,avg,$col average 1 ] 
 		} elseif { $row == "sdev" } { set ret [ getStat $var,avg,$col sdev 2 ] 
-		} elseif { $col == "sum" } { set ret [ normalizeCount [ $var,$row,avg count ]] 
+		} elseif { $col == "sum" } { set ret [ normalizeCount [ $var,$row,avg count ] $totalCnt] 
 		} elseif { $col == "avg" } { set ret [ getStat $var,$row,avg average 1] 
 		} elseif { $col == "sdev" } { set ret [ getStat $var,$row,avg sdev 2 ] 
 		} else { return "??" }
@@ -139,8 +151,8 @@ proc getOutputData { elem row col } {
 
 
 
-proc output0d {elem} {
-	puts "[dict get $elem desc]: [formatNumber [normalizeCount [dict get $elem data]]]"
+proc output0d {elem } {
+	puts "[dict get $elem desc]: [formatNumber [normalizeCount [dict get $elem data] 1]]"
 }
 
 proc output1d {elem} {
@@ -182,7 +194,7 @@ proc output2d {elem} {
 		}
 		puts ""
 	}
-	
+	puts ""
 }
 
 proc outputdb { } {

@@ -10,7 +10,7 @@ source format/count
 set cellWidth 6
 set numberPrecision 3
 
-proc normalizeCount { count } {
+proc normalizeCount { count totalCnt } {
 	global dealCnt
 	if {[string is integer -strict $count]} {
 		return [expr 100.0 * $count / $dealCnt]

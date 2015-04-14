@@ -1,0 +1,480 @@
+<!--
+#
+# GIB Input ( http://www.gibware.com/ )
+#
+n 953.Q753.T.AQJT7
+e AT642.AJ.A95.K65
+s KQ7.9864.QJ32.93
+w J8.KT2.K8764.842
+#
+# iDeal Input ( http://www.best.com/~thomaso/iDeal/notes.html )
+#
+north is {953 Q753 T AQJT7}
+east is {AT642 AJ A95 K65}
+south is {KQ7 9864 QJ32 93}
+west is {J8 KT2 K8764 842}
+-->
+<pre>
+          S : 953
+          H : Q753
+          D : T
+          C : AQJT7
+ S : J8             S : AT642        
+ H : KT2            H : AJ           
+ D : K8764          D : A95          
+ C : 842            C : K65          
+          S : KQ7
+          H : 9864
+          D : QJ32
+          C : 93
+---------------------------
+
+</pre>
+<!--
+#
+# GIB Input ( http://www.gibware.com/ )
+#
+n KQJ8752..J43.T43
+e A93.A765.K875.65
+s T4.9832.Q2.AQJ92
+w 6.KQJT4.AT96.K87
+#
+# iDeal Input ( http://www.best.com/~thomaso/iDeal/notes.html )
+#
+north is {KQJ8752 - J43 T43}
+east is {A93 A765 K875 65}
+south is {T4 9832 Q2 AQJ92}
+west is {6 KQJT4 AT96 K87}
+-->
+<pre>
+          S : KQJ8752
+          H : ---
+          D : J43
+          C : T43
+ S : 6              S : A93          
+ H : KQJT4          H : A765         
+ D : AT96           D : K875         
+ C : K87            C : 65           
+          S : T4
+          H : 9832
+          D : Q2
+          C : AQJ92
+---------------------------
+
+</pre>
+<!--
+#
+# GIB Input ( http://www.gibware.com/ )
+#
+n AK984.A52.QJ6.83
+e 5.QJ743.A87.Q654
+s QT763.K6.K42.KJT
+w J2.T98.T953.A972
+#
+# iDeal Input ( http://www.best.com/~thomaso/iDeal/notes.html )
+#
+north is {AK984 A52 QJ6 83}
+east is {5 QJ743 A87 Q654}
+south is {QT763 K6 K42 KJT}
+west is {J2 T98 T953 A972}
+-->
+<pre>
+          S : AK984
+          H : A52
+          D : QJ6
+          C : 83
+ S : J2             S : 5            
+ H : T98            H : QJ743        
+ D : T953           D : A87          
+ C : A972           C : Q654         
+          S : QT763
+          H : K6
+          D : K42
+          C : KJT
+---------------------------
+
+</pre>
+<!--
+#
+# GIB Input ( http://www.gibware.com/ )
+#
+n AKJT52.J4.9862.8
+e 94.862.AQJT7.AJ3
+s Q73.AQ.43.Q97654
+w 86.KT9753.K5.KT2
+#
+# iDeal Input ( http://www.best.com/~thomaso/iDeal/notes.html )
+#
+north is {AKJT52 J4 9862 8}
+east is {94 862 AQJT7 AJ3}
+south is {Q73 AQ 43 Q97654}
+west is {86 KT9753 K5 KT2}
+-->
+<pre>
+          S : AKJT52
+          H : J4
+          D : 9862
+          C : 8
+ S : 86             S : 94           
+ H : KT9753         H : 862          
+ D : K5             D : AQJT7        
+ C : KT2            C : AJ3          
+          S : Q73
+          H : AQ
+          D : 43
+          C : Q97654
+---------------------------
+
+</pre>
+<!--
+#
+# GIB Input ( http://www.gibware.com/ )
+#
+n A9876.7643.AQ4.Q
+e 3.JT52.62.KJ9543
+s QJ54.KQ8.985.T86
+w KT2.A9.KJT73.A72
+#
+# iDeal Input ( http://www.best.com/~thomaso/iDeal/notes.html )
+#
+north is {A9876 7643 AQ4 Q}
+east is {3 JT52 62 KJ9543}
+south is {QJ54 KQ8 985 T86}
+west is {KT2 A9 KJT73 A72}
+-->
+<pre>
+          S : A9876
+          H : 7643
+          D : AQ4
+          C : Q
+ S : KT2            S : 3            
+ H : A9             H : JT52         
+ D : KJT73          D : 62           
+ C : A72            C : KJ9543       
+          S : QJ54
+          H : KQ8
+          D : 985
+          C : T86
+---------------------------
+
+</pre>
+<!--
+#
+# GIB Input ( http://www.gibware.com/ )
+#
+n T6.K97.7652.AQJ5
+e A942.T5.A93.T942
+s 873.QJ864.JT.K83
+w KQJ5.A32.KQ84.76
+#
+# iDeal Input ( http://www.best.com/~thomaso/iDeal/notes.html )
+#
+north is {T6 K97 7652 AQJ5}
+east is {A942 T5 A93 T942}
+south is {873 QJ864 JT K83}
+west is {KQJ5 A32 KQ84 76}
+-->
+<pre>
+          S : T6
+          H : K97
+          D : 7652
+          C : AQJ5
+ S : KQJ5           S : A942         
+ H : A32            H : T5           
+ D : KQ84           D : A93          
+ C : 76             C : T942         
+          S : 873
+          H : QJ864
+          D : JT
+          C : K83
+---------------------------
+
+</pre>
+<!--
+#
+# GIB Input ( http://www.gibware.com/ )
+#
+n KJ75.Q542.J52.98
+e QT92.J973.AKQ86.
+s A43.T86.4.AKQT65
+w 86.AK.T973.J7432
+#
+# iDeal Input ( http://www.best.com/~thomaso/iDeal/notes.html )
+#
+north is {KJ75 Q542 J52 98}
+east is {QT92 J973 AKQ86 -}
+south is {A43 T86 4 AKQT65}
+west is {86 AK T973 J7432}
+-->
+<pre>
+          S : KJ75
+          H : Q542
+          D : J52
+          C : 98
+ S : 86             S : QT92         
+ H : AK             H : J973         
+ D : T973           D : AKQ86        
+ C : J7432          C : ---          
+          S : A43
+          H : T86
+          D : 4
+          C : AKQT65
+---------------------------
+
+</pre>
+<!--
+#
+# GIB Input ( http://www.gibware.com/ )
+#
+n Q952.A9.A92.AK82
+e A.QJ432.8643.JT7
+s JT764.KT7.QT5.63
+w K83.865.KJ7.Q954
+#
+# iDeal Input ( http://www.best.com/~thomaso/iDeal/notes.html )
+#
+north is {Q952 A9 A92 AK82}
+east is {A QJ432 8643 JT7}
+south is {JT764 KT7 QT5 63}
+west is {K83 865 KJ7 Q954}
+-->
+<pre>
+          S : Q952
+          H : A9
+          D : A92
+          C : AK82
+ S : K83            S : A            
+ H : 865            H : QJ432        
+ D : KJ7            D : 8643         
+ C : Q954           C : JT7          
+          S : JT764
+          H : KT7
+          D : QT5
+          C : 63
+---------------------------
+
+</pre>
+<!--
+#
+# GIB Input ( http://www.gibware.com/ )
+#
+n K3.A4.AKQ832.962
+e AT82.QJ8532.T.83
+s 965.T6.J94.AKJT4
+w QJ74.K97.765.Q75
+#
+# iDeal Input ( http://www.best.com/~thomaso/iDeal/notes.html )
+#
+north is {K3 A4 AKQ832 962}
+east is {AT82 QJ8532 T 83}
+south is {965 T6 J94 AKJT4}
+west is {QJ74 K97 765 Q75}
+-->
+<pre>
+          S : K3
+          H : A4
+          D : AKQ832
+          C : 962
+ S : QJ74           S : AT82         
+ H : K97            H : QJ8532       
+ D : 765            D : T            
+ C : Q75            C : 83           
+          S : 965
+          H : T6
+          D : J94
+          C : AKJT4
+---------------------------
+
+</pre>
+<!--
+#
+# GIB Input ( http://www.gibware.com/ )
+#
+n T73.T6.KJ7.AQ873
+e 92.K8754.A93.K54
+s J654.93.Q8642.92
+w AKQ8.AQJ2.T5.JT6
+#
+# iDeal Input ( http://www.best.com/~thomaso/iDeal/notes.html )
+#
+north is {T73 T6 KJ7 AQ873}
+east is {92 K8754 A93 K54}
+south is {J654 93 Q8642 92}
+west is {AKQ8 AQJ2 T5 JT6}
+-->
+<pre>
+          S : T73
+          H : T6
+          D : KJ7
+          C : AQ873
+ S : AKQ8           S : 92           
+ H : AQJ2           H : K8754        
+ D : T5             D : A93          
+ C : JT6            C : K54          
+          S : J654
+          H : 93
+          D : Q8642
+          C : 92
+---------------------------
+
+</pre>
+<!--
+#
+# GIB Input ( http://www.gibware.com/ )
+#
+n KT87.J5.K.AKQJ98
+e A64.AQT764.96.43
+s Q.92.QJT8432.762
+w J9532.K83.A75.T5
+#
+# iDeal Input ( http://www.best.com/~thomaso/iDeal/notes.html )
+#
+north is {KT87 J5 K AKQJ98}
+east is {A64 AQT764 96 43}
+south is {Q 92 QJT8432 762}
+west is {J9532 K83 A75 T5}
+-->
+<pre>
+          S : KT87
+          H : J5
+          D : K
+          C : AKQJ98
+ S : J9532          S : A64          
+ H : K83            H : AQT764       
+ D : A75            D : 96           
+ C : T5             C : 43           
+          S : Q
+          H : 92
+          D : QJT8432
+          C : 762
+---------------------------
+
+</pre>
+<!--
+#
+# GIB Input ( http://www.gibware.com/ )
+#
+n J9742.64.J43.732
+e 5.JT732.T52.A865
+s A863.K98.AQ8.KJ9
+w KQT.AQ5.K976.QT4
+#
+# iDeal Input ( http://www.best.com/~thomaso/iDeal/notes.html )
+#
+north is {J9742 64 J43 732}
+east is {5 JT732 T52 A865}
+south is {A863 K98 AQ8 KJ9}
+west is {KQT AQ5 K976 QT4}
+-->
+<pre>
+          S : J9742
+          H : 64
+          D : J43
+          C : 732
+ S : KQT            S : 5            
+ H : AQ5            H : JT732        
+ D : K976           D : T52          
+ C : QT4            C : A865         
+          S : A863
+          H : K98
+          D : AQ8
+          C : KJ9
+---------------------------
+
+</pre>
+<!--
+#
+# GIB Input ( http://www.gibware.com/ )
+#
+n 9642..J7.KJT9843
+e K3.K95.K942.A762
+s T875.AQJ62.A83.5
+w AQJ.T8743.QT65.Q
+#
+# iDeal Input ( http://www.best.com/~thomaso/iDeal/notes.html )
+#
+north is {9642 - J7 KJT9843}
+east is {K3 K95 K942 A762}
+south is {T875 AQJ62 A83 5}
+west is {AQJ T8743 QT65 Q}
+-->
+<pre>
+          S : 9642
+          H : ---
+          D : J7
+          C : KJT9843
+ S : AQJ            S : K3           
+ H : T8743          H : K95          
+ D : QT65           D : K942         
+ C : Q              C : A762         
+          S : T875
+          H : AQJ62
+          D : A83
+          C : 5
+---------------------------
+
+</pre>
+<!--
+#
+# GIB Input ( http://www.gibware.com/ )
+#
+n KQ5.653.A984.AT4
+e 73.KQ87.KT3.9532
+s AJT9842.T4.52.J7
+w 6.AJ92.QJ76.KQ86
+#
+# iDeal Input ( http://www.best.com/~thomaso/iDeal/notes.html )
+#
+north is {KQ5 653 A984 AT4}
+east is {73 KQ87 KT3 9532}
+south is {AJT9842 T4 52 J7}
+west is {6 AJ92 QJ76 KQ86}
+-->
+<pre>
+          S : KQ5
+          H : 653
+          D : A984
+          C : AT4
+ S : 6              S : 73           
+ H : AJ92           H : KQ87         
+ D : QJ76           D : KT3          
+ C : KQ86           C : 9532         
+          S : AJT9842
+          H : T4
+          D : 52
+          C : J7
+---------------------------
+
+</pre>
+<!--
+#
+# GIB Input ( http://www.gibware.com/ )
+#
+n 9532.3.KQ76.9753
+e T7.9752.A9832.JT
+s 6.QJT6.54.AKQ642
+w AKQJ84.AK84.JT.8
+#
+# iDeal Input ( http://www.best.com/~thomaso/iDeal/notes.html )
+#
+north is {9532 3 KQ76 9753}
+east is {T7 9752 A9832 JT}
+south is {6 QJT6 54 AKQ642}
+west is {AKQJ84 AK84 JT 8}
+-->
+<pre>
+          S : 9532
+          H : 3
+          D : KQ76
+          C : 9753
+ S : AKQJ84         S : T7           
+ H : AK84           H : 9752         
+ D : JT             D : A9832        
+ C : 8              C : JT           
+          S : 6
+          H : QJT6
+          D : 54
+          C : AKQ642
+---------------------------
+
+</pre>
