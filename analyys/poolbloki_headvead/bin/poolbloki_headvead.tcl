@@ -47,40 +47,37 @@ debug ""
 
 set suitPermutations [ list [list clubs diamonds hearts spades] [list diamonds clubs hearts spades] [list clubs hearts diamonds spades]	[list diamonds hearts clubs spades] [list hearts clubs diamonds spades] [list hearts diamonds clubs spades] [list clubs diamonds spades hearts] [list diamonds clubs spades hearts] [list clubs hearts spades diamonds] [list diamonds hearts spades clubs] [list hearts clubs spades diamonds] [list hearts diamonds spades clubs] [list clubs spades diamonds hearts] [list diamonds spades clubs hearts] [list clubs spades hearts diamonds] [list diamonds spades hearts clubs] [list hearts spades clubs diamonds] [list hearts spades diamonds clubs] [list spades clubs diamonds hearts] [list spades diamonds clubs hearts] [list spades clubs hearts diamonds] [list spades diamonds hearts clubs] [list spades hearts clubs diamonds] [list spades hearts diamonds clubs] ]
 set vulnList [ list "EW" "-" "All" "NS"]
-set permList [ list 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 ]
-#set permList [list 9] # DHSC
+set permIndexes [ list 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 ]
+#set permIndexes [list 9] # DHSC
 set rowLabels [ list . ]
 set colLabels [ list . "NO" -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 avg "ParPos" "ParNeg" "noPar" "b000" "b001" "b010" "b011" "b100" "b101" "b110" "b111" "b1xx" "bx1x" "bxx1" ]
 
 # Initialize table with all the labels
 proc initdb {} {
-	global vulnList permList rowLabels colLabels
-	foreach perm $permList {
+	global vulnList permIndexes rowLabels colLabels
+	foreach permIndex $permIndexes {
 		foreach vuln $vulnList {
-			lappend rowLabels [ getRowLabel $perm $vuln ]
+			lappend rowLabels [ getRowLabel $permIndex $vuln ]
 		}
 	}
-	#lappend rowLabels [ getSummaryRowLabel ]
-	#lappend rowLabels sum
-	init s "S H D C Bid Vul Combo" $rowLabels $colLabels
+	init s "S H D C Bid Vul Combo OtherCombo HandPattern" $rowLabels $colLabels
 }
 
 proc analyze { } {
-	global tricks suitPermutations vulnList permList
+	global tricks suitPermutations vulnList permIndexes
 	
-	debug "Partner: [north]"
+	debug "Partner: [north]  Opps: [west] | [east]"
 	foreach vulString $vulnList {
 		#calculate tricks array
 		set par [lindex [parscore south $vulString] 2]
-		foreach perm $permList {
-			set parArray [parscore_permuteSuits south $vulString $perm]
+		foreach permIndex $permIndexes {
+			set parArray [parscore_permuteSuits south $vulString $permIndex]
 			set par [lindex $parArray 2]
 			foreach index [ list 0 1 2 3 ] { # search for the best suit index
-				if { [ lindex [lindex $suitPermutations $perm ] $index ] == {spades} } { set spadeIndex $index }
+				if { [ lindex [lindex $suitPermutations $permIndex ] $index ] == {spades} } { set spadeIndex $index }
 			}
 			set scoreDenom [ lindex [lindex $suitPermutations 0 ] $spadeIndex ]
-			set rowLabel [getRowLabel $perm $vulString]
-			set summaryRowLabel [ getSummaryRowLabel ]
+			set rowLabel [getRowLabel $permIndex $vulString]
 
 			# Calculate highest possible level of our suit to beat par
 			set optimalLevel "NO"
@@ -106,20 +103,18 @@ proc analyze { } {
 			}
 			
 			set nsPreSpadesCombo "b[lindex $parArray 4][lindex $parArray 5][lindex $parArray 6]"
-			foreach Label [list $rowLabel $summaryRowLabel] {
-				increment s $Label $optimalLevel
-				increment s $Label $parSign
-				increment s $Label $nsPreSpadesCombo
-				if {[lindex $parArray 4]} { increment s $Label "b1xx"}
-				if {[lindex $parArray 5]} { increment s $Label "bx1x"}
-				if {[lindex $parArray 6]} { increment s $Label "bxx1"}
-			}
+                        increment s $rowLabel $optimalLevel
+                        increment s $rowLabel $parSign
+                        increment s $rowLabel $nsPreSpadesCombo
+                        if {[lindex $parArray 4]} { increment s $rowLabel "b1xx"}
+                        if {[lindex $parArray 5]} { increment s $rowLabel "bx1x"}
+                        if {[lindex $parArray 6]} { increment s $rowLabel "bxx1"}
 		}
 	}
 }
 
 
-proc parscore_permuteSuits {dealer whovul suitPermutationIndex} {
+proc parscore_permuteSuits {dealer whovul permIndex} {
     if {"$whovul"=="EW"} {
 	set vul(EW) vul
         set vul(NS) nonvul
@@ -155,7 +150,7 @@ proc parscore_permuteSuits {dealer whovul suitPermutationIndex} {
 		set denom "notrump"
 		set scoreDenom "notrump"
 	    } else {
-		set denom [ lindex [lindex $suitPermutations $suitPermutationIndex] $denomIndex]
+		set denom [ lindex [lindex $suitPermutations $permIndex] $denomIndex]
 		set scoreDenom [ lindex [lindex $suitPermutations 0 ] $denomIndex]
 	    }
 	    # denom -- the suit for getting the number of tricks
@@ -164,9 +159,10 @@ proc parscore_permuteSuits {dealer whovul suitPermutationIndex} {
 	    foreach declarer $hands {
                 if {$denom == "notrump"} {
                   set fit 14
+                } elseif { $denom == "spades" } { 
+                  set fit 15 
                 } else {
                   set fit [expr {[$denom $declarer]+[$denom [partner $declarer]]}]
-		  if { $denom == "spades" } { set fit 15 }
                 }
 		incr passcount -1
 		set cpair $parscore(pair:$declarer)
@@ -200,7 +196,7 @@ proc parscore_permuteSuits {dealer whovul suitPermutationIndex} {
     
     set spadeIndex 0
     foreach denomIndex [ list 0 1 2 3 ] {
-	if {[lindex [lindex $suitPermutations $suitPermutationIndex] $denomIndex] == {spades}} {
+	if {[lindex [lindex $suitPermutations $permIndex] $denomIndex] == {spades}} {
 	    set spadeIndex $denomIndex
 	}
     }
@@ -215,17 +211,15 @@ proc parscore_permuteSuits {dealer whovul suitPermutationIndex} {
     list $bestcontract $bestdeclarer $bestscore $besttricks $isNS $isPre $isSpadesGood $prevSpadesScore
 }
 
-proc getRowLabel { suitPermutationIndex vuln } {
+proc getRowLabel { permIndex vuln } {
 	global suitPermutations
 	set southHand ""
 	set scoreDenom -1
-	set scoreCombo ""
 	foreach denomIndex [ list 3 2 1 0 ] {
-		set denom [ lindex [lindex $suitPermutations $suitPermutationIndex] $denomIndex]
+		set denom [ lindex [lindex $suitPermutations $permIndex] $denomIndex]
 		set combo [ south $denom ]
 		if { $denom == {spades} } {
 			set scoreDenom $denomIndex
-			set scoreCombo $combo
 			set combo "($combo)"
 		}
 		#if { $combo == "" } { set combo "-"}
@@ -238,28 +232,10 @@ proc getRowLabel { suitPermutationIndex vuln } {
 	if { $vuln == "-"} { set vulStr "--" }
 	if { $vuln == "All"} { set vulStr "++" }
 	append southHand $vulStr
-	append southHand " $scoreCombo"
+        append southHand " [south spades] [south hearts]-[south diamonds]-[south clubs]"
+        append southHand " [spades south]-[hearts south]-[diamonds south]-[clubs south]"
 	return $southHand
 }
-
-proc getSummaryRowLabel {} {
-	return [expr 1.0/96]
-	set southHand ""
-	append southHand "([ south spades ])"
-	append southHand "-[south hearts]"
-	append southHand "-[south diamonds]"
-	append southHand "-[south clubs]"
-	return $southHand
-}
-
-proc getRowIndex { suitPermutationIndex vuln } {
-	global vulnList
-	foreach i [list 0 1 2 3] {
-		if { $vuln == [lindex $vulnList $i]} { set vulIndex $i }
-	}
-	return [expr {4 * $suitPermutationIndex + $vulIndex}]
-}
-
 
 main {
 	global dealCnt
