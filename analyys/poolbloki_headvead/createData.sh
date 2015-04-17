@@ -5,7 +5,7 @@ if [ "$#" -ge 1 ]; then dealCount=$1; fi
 comboCount=5
 if [ "$#" -ge 2 ]; then comboCount=$2; fi
 otherComboCount=3
-if [ "$#" -ge 3 ]; then otherComboCount=$2; fi
+if [ "$#" -ge 3 ]; then otherComboCount=$3; fi
 path="analyys/poolbloki_headvead"
 datafile="data/data_"$dealCount"_"$(date +"%Y%m%d_%H%M%S")
 
