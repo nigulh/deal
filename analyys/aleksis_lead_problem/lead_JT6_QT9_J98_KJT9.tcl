@@ -1,21 +1,13 @@
-source lib/utility.tcl
-source lib/ddscore.tcl
 source lib/counters.tcl
-source lib/parscore.tcl
 source format/none
-
-
-set cellWidth 5
-set numberPrecision 3
-set firstCellWidth 5
 
 
 set leads [ list "JS" "6S" "QH" "TH" "JD" "9D" "KC" "JC" ]
 set rowLabels [ concat [list . ] $leads]
-set colLabels [ list . 8 9 10 11 "x" sum sdev avg]
+set colLabels [ list . 8 9 10 11 "x" avg]
 init s "Lead" $rowLabels $colLabels
 init dealCount "Accepted deals"
-init allDeals "All deals"
+init allDeals "Plus rejected deals"
 
 proc analyze { } {
         global leads
@@ -27,7 +19,9 @@ proc analyze { } {
                 set t [dds -leader west -trick $lead south hearts]
             }
             increment s $lead $t
-            if {$t < 10} { increment s $lead "x" }
+            if {$t < 10} { 
+                increment s $lead "x" 
+            }
         } 
 }
 

@@ -3,12 +3,13 @@
 ## global variables
 ##	tab - database
 ##	cellWidth
+##      firstCellWidth 
 ##	numberPrecision
 ##
 ## global methods
 ## 	init
 ## 	increment
-##	output
+##	outputdb
 ##
 
 proc isStatHeader { header } {
@@ -130,7 +131,8 @@ proc normalizeCount { count totalCnt } {
 proc getOutputData { elem row col statsFlags } {
         set dataKey "[isStatHeader $row][isStatHeader $col],$row,$col"
         switch -glob $dataKey {
-            *,.,. { return "" }
+            *,.,. -
+            *,., { return [dict get $elem desc] }
             *,.,* { return $col }
             *,*,. { return $row }
         }
@@ -165,44 +167,33 @@ proc output0d {elem} {
 	puts "[dict get $elem desc]: [formatNumber [dict get $elem data]]"
 }
 
-proc output1d {elem} {
-	puts "[dict get $elem desc]:"
-	set data [dict get $elem data]
+proc output1d {elem statsFlags} {
 	set showAsRow true
-        set statsFlags "[dict get $elem withRowStats][dict get $elem withColumnStats]"
 	if { !$showAsRow } {
-		foreach row [dict get $elem rows] {
-			set data [getOutputData $elem $row "" $statsFlags]
-			puts "[formatCell $row] [formatCell $data]"
-		}
+	    puts "[dict get $elem desc]:"
+            foreach row [dict get $elem rows] {
+                    set data [getOutputData $elem $row "" $statsFlags]
+                    puts "[formatCell $row] [formatCell $data]"
+            }
 	} else {
 		foreach row [dict get $elem rows] {
-			puts -nonewline "[formatCell $row]"
+			puts -nonewline "[formatCell $row [expr {$row == "."}]]"
 		}
 		puts ""
 		foreach row [dict get $elem rows] {
 			set data [getOutputData $elem $row "" $statsFlags]
-			puts -nonewline "[formatCell $data]"
+			puts -nonewline "[formatCell $data [expr {$row == "."}]]"
 		}
 		puts ""
 	}
 }
 
-proc output2d {elem} {
-	global firstCellWidth
+proc output2d {elem statsFlags} {
 	set isFirst true
-        set statsFlags "[dict get $elem withRowStats][dict get $elem withColumnStats]"
-	foreach desc [split [dict get $elem desc] "\n"] {
-		if {!$isFirst} {puts ""}
-		puts -nonewline [formatCell $desc $firstCellWidth]
-		set isFirst false
-	}
 	foreach row [dict get $elem rows] {
 		foreach col [dict get $elem cols] {
 			set data [getOutputData $elem $row $col $statsFlags]
-			if { $col == "." && $row == "." } { continue }
-			if { $col == "." } { set width $firstCellWidth } else { set width -1 }
-			puts -nonewline [formatCell $data $width]
+			puts -nonewline [formatCell $data [expr {$col == "."}]]
 		}
 		puts ""
 	}
@@ -213,23 +204,22 @@ proc output {key} {
 	global tab
         set elem [ dict get $tab $key ]
         set dim [ dict get $elem dim ]
+        set statsFlags "[dict get $elem withRowStats][dict get $elem withColumnStats]"
         switch $dim {
             0 { output0d $elem }
-            1 { output1d $elem }
-            2 { output2d $elem }
+            1 { output1d $elem $statsFlags }
+            2 { output2d $elem $statsFlags }
         }
 }
 
 proc outputdb { } {
 	global tab
-	foreach key [dict keys $tab] {
-            output $key 
-	}
+	foreach key [dict keys $tab] { output $key }
 }
 
 set cellWidth 6
 set numberPrecision 3
-set firstCellWidth 30
+set firstCellWidth 10
 
 proc formatNumber {data {precision -1}} {
 	global numberPrecision
@@ -239,8 +229,9 @@ proc formatNumber {data {precision -1}} {
 	}
 }
 
-proc formatCell {data {width -1} } {
+proc formatCell {data {isFirst false} } {
 	global cellWidth
-	if { $width == -1 } { set width $cellWidth }
-	return [format "%-*s " $width $data]
+	global firstCellWidth
+	if { $isFirst } { set width $firstCellWidth } else { set width $cellWidth }
+	return [format "%-*s " [expr [string last "\n" $data] + $width] $data]
 }
