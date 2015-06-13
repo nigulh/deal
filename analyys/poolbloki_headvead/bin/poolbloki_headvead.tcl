@@ -236,12 +236,10 @@ proc getRowLabel { permIndex vuln } {
 	if { $vuln == "-"} { set vulStr "--" }
 	if { $vuln == "All"} { set vulStr "++" }
 	append southHand $vulStr
-        append southHand " [south $trumpSuit] "
-        set isFirst true
+        append southHand " [south $trumpSuit] \[[$trumpSuit south]\]"
         foreach otherSuit [ list spades hearts diamonds clubs ] {
             if { $otherSuit != $trumpSuit } { 
-                if { $isFirst } { set isFirst false } { append southHand "-" }
-                append southHand "[south $otherSuit]"
+                append southHand "-[south $otherSuit]"
             }
         }
         append southHand " [spades south]-[hearts south]-[diamonds south]-[clubs south]"

@@ -3,6 +3,7 @@ args <- commandArgs(trailingOnly = TRUE)
 print(args)
 datafilename <- if (length(args) >= 1) args[1] else "stdin"
 rm(args)
+print(sprintf("datafile: %s", datafilename));
 
 df = data.table(read.csv(datafilename, header=T, sep=" "))
 len <- function(a) {return(nchar(lapply(a, as.character)));} # convert levels to string
