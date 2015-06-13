@@ -1,0 +1,28 @@
+Error code=-12
+
+Deal data:
+trump=1
+first=1
+index=0 currentTrickSuit=0 currentTrickRank=-2
+index=1 currentTrickSuit=0 currentTrickRank=0
+index=2 currentTrickSuit=0 currentTrickRank=0
+seat=0 suit=0 remaining=12
+seat=0 suit=1 remaining=537
+seat=0 suit=2 remaining=4362
+seat=0 suit=3 remaining=73
+seat=1 suit=0 remaining=195
+seat=1 suit=1 remaining=66
+seat=1 suit=2 remaining=1076
+seat=1 suit=3 remaining=1042
+seat=2 suit=0 remaining=7200
+seat=2 suit=1 remaining=6180
+seat=2 suit=2 remaining=2049
+seat=2 suit=3 remaining=4132
+seat=3 suit=0 remaining=784
+seat=3 suit=1 remaining=1408
+seat=3 suit=2 remaining=704
+seat=3 suit=3 remaining=2944
+
+target=-1
+solutions=1
+mode=0
