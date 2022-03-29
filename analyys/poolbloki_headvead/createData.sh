@@ -23,6 +23,6 @@ echo $path/$datafile
 python $path/bin/balancedshuffle.py $comboCount $otherComboCount | xargs -I {}  bash -c "generateHands {}" | awk '(NR == 1) {header = $0; print; } ($0 != header)' > $path/$datafile
 
 cat $path/$datafile | r -q --vanilla -f $path/bin/sample.R
-cat $path/$datafile | r -q --vanilla -e 'source("'$path/bin/sample.R'")'
+#cat $path/$datafile | r -q --vanilla -e 'source("'$path/bin/sample.R'")'
 
 

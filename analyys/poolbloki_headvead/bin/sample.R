@@ -13,9 +13,9 @@ df[Vul=="--"][order(noPar)][,list(S,H,D,C,avg,ParPos,ParNeg,noPar,Cnt)]
 print("Tsoonsusest soltuvus!")
 df[,list(avg=mean(avg),noPar=mean(noPar),ParPos=mean(ParPos),ParNeg=mean(ParNeg), sum=sum(Cnt)),by=list(Vul,len(Combo))][order(noPar)]
 print("Mastist soltuvus!")
-df[,list(avg=mean(avg),noPar=mean(noPar),ParPos=mean(ParPos),ParNeg=mean(ParNeg), sum=sum(Cnt)),by=list(Bid,len(Combo))][order(Bid,noPar)]
+df[,list(avg=mean(avg),noPar=mean(noPar),ParPos=mean(ParPos),ParNeg=mean(ParNeg), sum=sum(Cnt)),by=list(Bid,len(Combo))][order(noPar)]
 print("Combost soltuvus!")
 df[,list(avg=mean(avg),noPar=mean(noPar),ParPos=mean(ParPos),ParNeg=mean(ParNeg), sum=sum(Cnt)),by=Combo][order(noPar)]
 print("OtherCombost soltuvus!")
-df[,list(avg=mean(avg),noPar=mean(noPar),ParPos=mean(ParPos),ParNeg=mean(ParNeg), sum=sum(Cnt)),by=OtherCombo][order(noPar)]
+df[,list(avg=mean(avg),noPar=mean(noPar),ParPos=mean(ParPos),ParNeg=mean(ParNeg), sum=sum(Cnt)),by=OtherCombo][order(noPar)][1:80]
 

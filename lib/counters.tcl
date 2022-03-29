@@ -123,6 +123,9 @@ proc getStat { stat type minCount } {
 
 proc normalizeCount { count totalCnt } {
 	if {[string is integer -strict $count]} {
+                if { $totalCnt == 0 } {
+                    return "-1"
+                }
 		return [expr 100.0 * $count / $totalCnt]
 	}
 	return $count

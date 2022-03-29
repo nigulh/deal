@@ -9,10 +9,10 @@ south is "82 9754 K986532 -"
 set cellWidth 6
 set numberPrecision 3
 
-proc normalizeCount { count } {
-	global dealCnt
-	return [expr 100.0 * $count / $dealCnt]
-}
+#proc normalizeCount { count } {
+#	global dealCnt
+#	return [expr 100.0 * $count / $dealCnt]
+#}
 
 
 set rows [list . 0 1 2 3 4 5 6 7 8 9 10 11 12 13 sum avg sdev]
@@ -51,7 +51,8 @@ main {
 deal_finished {
 	global dealCnt tab
 	
-	outputdb $tab
+	outputdb 
+        #$tab
 	puts "Generated $dealCnt deals"
 	
 	#puts $tab
